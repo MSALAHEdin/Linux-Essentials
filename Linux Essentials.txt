@@ -1,0 +1,175 @@
+operating system (OS) is system software that manages computer hardware, and software resources, and provides common services for computer programs.
+
+Windows Vs Linux in Security
+
+    Linux is usually installed on the most important, mission-critical systems.
+    Most security appliances also run Linux  “Firewalls/Routers/IDS”.
+    In Windows all logged-in Users can have Administrator privileges while in Linux there is the idea of limited access accounts and a superuser called root which controls all users’ privileges, the root is equivalent to the Administrator in windows.
+    Most security appliances also run Linux  “Firewalls/Routers/IDS”.
+
+SSH connection:
+
+    There are a lot of scenarios that you want to log into your system but you are away from it, that’s why we need SSH
+
+ 
+
+What is SSH?
+
+The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH.
+
+
+SSH is running by default on port 22 but it is not always the case. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                  Linux Basics Commands 
+
+System information commands:
+
+whoami  → This command prints out your current user
+
+id   →   This command prints out your UID, GID, and also all the groups that your current user is in. 
+
+hostname  →  This command prints out your machine’s hostname (Generally defined in /etc/hosts)
+
+uname -a →  This command prints out your Operating system’s kernel version and Architecture
+
+
+
+
+Printing the current working directory:
+
+pwd → One of the easiest built-in Linux commands to remember as it stands for `print working directory`
+
+Another ‘a bit advanced’ trick but very useful to know as a beginner
+
+echo $PWD
+
+‘echo’ is similar to print.
+
+
+
+
+List Content of directories:
+
+ls   → This is also a built-in command in Linux, which is the abbreviation of ‘list’ it basically lists all the files/directories on your current working directory.
+
+ls -l → the -l parameter stands for the of use a long listing format, which contains detailed information about the files.
+
+ls -a → ‘-a’ stands for all which means it will show all the files/directories even if they’re hidden. As we can see below a new file appeared which was previously hidden
+
+
+
+Changing Current Directory:
+
+cd    → 
+
+..    →  We can use double dots to go back.
+
+cd ~  → Another trick to know, In Linux ‘~’ is an alias to /home/. This means we can cd into our home directory with ease.
+
+cd -  → What if we wanna go back to /home/elleuch/cybertalents/tasks which were our previous working directory.
+
+
+
+Manipulating files and directories:
+
+mkdir  → With this built-in command we can create directories.
+
+touch → With this built-in command we can create files
+
+mv  → With this built-in command we can either move or rename files and directories.
+
+rm → to remove files  
+
+rm -rf → to remove directories
+
+
+
+Getting help: 
+
+It can happen, even to the best of us, that sometimes we forget the syntax of certain commands. But likely Linux has its built-in manual as well to guide us. 
+
+    We will be using the ‘man’ command. It will display to us the whole documentation of the certain command. Let’s try it. Pretty handy command to use when needed
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                  File System 
+
+/  ,This is the root directory which should contain only the directories needed at the top level of the file structure.
+
+/bin , This is where the executable files are located. These files are available to all users.
+
+/dev ,These are device drivers.
+
+/etc , Supervisor directory commands, configuration files, disk configuration files, valid user lists, groups, ethernet, hosts, and where to send critical messages.
+
+/lib , Contains shared library files and sometimes other kernel-related files.
+
+/home  ,Contains the home directory for users and other accounts.
+
+/tmp , Holds temporary files used between system boots.
+
+/kernel , Contains kernel files.
+
+/mnt , Used to mount other c file systems, such as cdrom and floppy for the CD-ROM drive and floppy diskette drive, respectively
+
+/usr , Used for miscellaneous purposes and can be used by many users. Includes administrative commands, shared files, library files, and others.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                   Software Installations with Terminal
+												   
+												   
+apt-get command
+
+apt-get is a command-line tool that helps in handling packages in Linux. Its main task is to retrieve the information and packages from the authenticated sources for installation, upgrade, and removal of packages along with their dependencies. Here APT stands for the Advanced Packaging Tool.
+
+    To install a package we can use the command              →   `sudo apt-get install packagename`.
+    To remove a package we can use the command               →   `sudo apt-get remove packagename`.
+    To update the package database we can use the command    →   `sudo apt-get update`.
+    To update all the packages to their latest version, we can use the command    →   `sudo apt-get upgrade`.
+											   
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                                    File Operations 
+													
+													
+Basic file operations:
+
+Touch Command  → Touch is used to create a file.
+
+
+Cat Command   → Cat is used to display file content, but the file is longer than the size of the window, so it scrolls past making it unreadable.
+
+
+More Command  → More is used to display file content, but the file is longer than the size of the window, it will display one page at a time.
+
+
+Head and Tail Commands  → Both tools are file operators to display a specific part of the file, Head command is used to display the first part of the file and Tail is the opposite; it displays the last part of the file.
+
+
+Grep Command  → Grep is used to search for a keyword or a specific pattern in the file.
+Ex: cat file.txt | grep "search"
+    cat file.txt | grep -i "search"  : to ignore case distinaction 
+	cat file.txt | grep "Fword\|Sword\|Thword"  :to search about many word.
+	
+
+Copying and deleting files :
+
+Cp commands  → Cp command (copy) is used to copy a file or a group of files or a directory to a specific location.
+
+mv commands  → mv command (move) is used to move a files or a group of files or a directory to another location.
+
+
+Counting file content :
+
+Wc Commands  → Wc command is used to count the number of words, lines, and characters.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
